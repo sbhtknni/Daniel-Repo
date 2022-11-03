@@ -12,7 +12,8 @@ public class SharedData {
 	private final int b;
 
 	/**
-	 * @param array
+	 * @param array 
+	 * given parameter 
 	 * @param b
 	 * constructor that get array and integer b
 	 */
@@ -53,6 +54,10 @@ public class SharedData {
 		return b;
 	}
 
+	/**
+	 * @return
+	 * get the flag
+	 */
 	public boolean getFlag() {
 		return flag;
 	}

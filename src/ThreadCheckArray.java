@@ -1,3 +1,9 @@
+/**
+ * @author Daniel Maman
+ * The program shows how, with the help of two threads,
+ * it is possible to check whether there are elements in the array whose
+ * sum is equal to a given sum
+ */
 public class ThreadCheckArray implements Runnable 
 {
 	private boolean flag;
@@ -6,6 +12,10 @@ public class ThreadCheckArray implements Runnable
 	int[] array;
 	int b;
 	
+	/**
+	 * @param sd - shared data
+	 * The function receives shared information and initializes it within a synchronized block
+	 */
 	public ThreadCheckArray(SharedData sd) 
 	{
 		this.sd = sd;	
@@ -17,6 +27,12 @@ public class ThreadCheckArray implements Runnable
 		winArray = new boolean[array.length];
 	}
 	
+	/**
+	 * @param n
+	 * @param b
+	 * A function whose function is to search for the sum of numbers in an array
+	 *  and check whether their number is equal to a given sum
+	 */
 	void rec(int n, int b)
 	{
 		synchronized (sd) 
@@ -50,6 +66,10 @@ public class ThreadCheckArray implements Runnable
 		rec(n-1, b);
 	}
 
+	/**
+	 *RUN function which activates the thread and waits for the previous thread
+	 * to see if it has finished and if there is any point in continuing to search again
+	 */
 	public void run() {
 		if (array.length != 1)
 			if (Thread.currentThread().getName().equals("thread1"))

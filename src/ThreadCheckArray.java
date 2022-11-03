@@ -1,5 +1,5 @@
 /**
- * @author Daniel Maman
+ * @author Daniel Maman and Ben
  * The program shows how, with the help of two threads,
  * it is possible to check whether there are elements in the array whose
  * sum is equal to a given sum

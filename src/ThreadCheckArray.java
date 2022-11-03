@@ -68,7 +68,8 @@ public class ThreadCheckArray implements Runnable
 
 	/**
 	 *RUN function which activates the thread and waits for the previous thread
-	 * to see if it has finished and if there is any point in continuing to search again
+	 * to see if it has finished and if there is any point in continuing to search again.
+	 * 
 	 */
 	public void run() {
 		if (array.length != 1)
